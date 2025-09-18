@@ -39,7 +39,7 @@
         <div class="w-full md:w-1/2 bg-gray-900 text-white px-12 py-12 flex items-center">
             <form wire:submit.prevent="submit" class="w-full space-y-6">
                 @if(session()->has('success'))
-                    <div class="bg-green-500 text-white p-2 rounded">{{ session('success') }}</div>
+                    <div class="bg-green-500 text-white p-2 rounded">{!! session('success') !!}</div>
                 @endif
                 <div>
                     <input type="text" wire:model="name" placeholder="Ваше имя" required

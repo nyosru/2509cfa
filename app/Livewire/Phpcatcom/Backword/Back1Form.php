@@ -37,7 +37,9 @@ class Back1Form extends Component
             }
         }
 
-        session()->flash('success', 'Ваша заявка отправлена!');
+        session()->flash('success', 'Ваша заявка отправлена!'.
+            '<br/>'.'Имя: <u>' . htmlspecialchars($this->name) . '</u> Телефон: <u>' . htmlspecialchars($this->phone) . '</u>'.
+            '<br/>'.'Мы свяжемся с вами в ближайшее время.');
         $this->reset(['name', 'phone', 'message', 'privacy']);
 
     }
