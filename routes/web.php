@@ -243,6 +243,7 @@ Route::get('/enter/tg', function () {
 
 // Маршрут для обработки обратного вызова от Telegram
 Route::get('/auth/telegram/callback', function () {
+
     // Если вы используете сторонний пакет, замените 'telegram' на нужный вам драйвер
     $data = Socialite::driver('telegram')->user();
 
@@ -288,9 +289,11 @@ Route::get('/download/{id}/{file_name}', [DownloadController::class, 'download']
 
 
 //use App\Http\Controllers\NewsController;
-//
+////
 //Route::get('/news', [NewsController::class, 'index'])->name('news.index');
 //Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
+//Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+//Route::get('/news/{?news}', \App\Livewire\Phpcatcom\News\NewsList::class)->name('news');
 //// Для авторизованных пользователей
 //Route::middleware('auth')->group(function () {
 //    Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
